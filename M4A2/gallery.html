@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jonathan's Photography</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous">
+</head>
+
+
+  <section class="sub-header">
+    <nav>
+      <a href="index.html"><img src="photo/logo.png"></a>
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="homepage.html">HOME</a></li>
+          <li><a href="about me.html">ABOUT US</a></li>
+          <li><a href="gallery.html">GALLERY</a></li>
+          <li><a href="">FEEDBACK</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+<h1>Photo Gallery</h1>
+</section>
+<!--------------My Gallery-------------->
+<section>
+
+    <div class="full-img" id="fullImgBox">
+       <img src="photo/img 1.jpg" id="fullTmg">
+       <span onclick="closeFullImg()">X</span> 
+    </div>
+    <div class="img-gallery">
+        <img src="photo/img 1.png" onclick="openFullImg(this.src)">
+        <img src="photo/img 2.png" onclick="openFullImg(this.src)">
+        <img src="photo/img 3.png" onclick="openFullImg(this.src)">
+        <img src="photo/img 4.png" onclick="openFullImg(this.src)">
+        <img src="photo/img 5.png" onclick="openFullImg(this.src)">
+        <img src="photo/img 6.png" onclick="openFullImg(this.src)">
+        <img src="photo/img 7.png" onclick="openFullImg(this.src)">
+        <img src="photo/img 8.png" onclick="openFullImg(this.src)">
+    </div>
+<script>
+  var fullImgBox = document.getElementById("fullImgBox");
+  var fullImg = document.getElementById("fullImg");
+
+  function openFullImg(pic){
+      fullImgBox.styly.display= "flex";
+      fullImg. src = pic;
+  }
+  function closeFullImg(){
+      fullImgBox.style.display= "none";
+  }
+</script>
+</section>
+
+<!---------------Footer--------------->
+<section class="footer">
+  <h4>About us</h4>
+  <p>No matter what ancient empire that is discussed, there is one thing every single civilization has in common, that thing is conflict with
+  one's neighbor. It is seen with every single civilization: from the old to the new world, there is constant fighting with one another for
+  a plethora of different reasons. For this reason, it is important to discuss the past, because those who don't are forced to repeat it.</p>
+  <div class="icons">
+    <i class="fa fa-facebook-square"></i>
+    <i class="fa-twitter-quare"></i>
+    <i class="fa-instagram-quare"></i>
+    <i class="fa-linkedin-quare"></i>
+  </div>
+  <p>made with<i class="fa-heart-o">by Jonathan</i></p>
+</section>
+
+
+
+<!------ JavaScript for Toggle Menu --------->
+<script>
+  var navLinks= document.getlementById("navLinks")
+  function showMenu(){
+    navLinks.style.right="0"
+  }
+  function hideMenu(){
+    navLinks.style.right="-200px"
+  }
+
+</script>
+  
+</body>
+</html>
